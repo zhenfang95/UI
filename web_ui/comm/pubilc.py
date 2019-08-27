@@ -4,7 +4,7 @@
 
 import os
 def get_cwd():
-    '''文件路径'''
+    '''跟目录路径'''
     path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     return path
 
