@@ -1,0 +1,5 @@
+baidu:
+  url: "https://www.baidu.com/"
+  so: "kw"
+  send: "java天下第一"
+  so_btm: "su"
