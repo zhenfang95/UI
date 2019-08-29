@@ -15,6 +15,8 @@ sender=read_config.sender  #发件人邮箱账号
 psw=read_config.psw        #发件人邮箱密码
 username=read_config.username #发件人姓名
 users_email=read_config.receiver  #收件人邮箱
+smtp_server=read_config.smtp_server  #读取邮件服务信息
+port=read_config.port   #读取端口号
 
 path=pubilc.get_cwd()
 file=os.path.join(path,'report/最新UI自动化测试报告.html')
@@ -44,11 +46,11 @@ def mail():
         message.attach(att)
         log1.info('添加附件')
 
-        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器
-        log1.info('连接QQ邮箱smtp服务')
-        server.login(sender, psw)  # 括号中对应的是发件人邮箱账号、邮箱密码
+        server = smtplib.SMTP_SSL(smtp_server, port)  # 发件人邮箱中的SMTP服务器
+        log1.info('连接邮箱smtp服务：%s' %smtp_server)
+        server.login(sender, psw)  # 发件人邮箱账号、邮箱密码
         log1.info('连接成功')
-        server.sendmail(sender, users_email, message.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(sender, users_email, message.as_string())  # 发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()  # 关闭连接
         log1.info("邮件发送成功")
 
