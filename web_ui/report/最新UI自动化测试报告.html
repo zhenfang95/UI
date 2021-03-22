@@ -197,9 +197,9 @@
         
     <div class='page-header'>
         <h1>UI自动化测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-08-29 17:08:16</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:18.865000</p>
-<p class='attribute'><strong>状态:</strong> 成功 1</p>
+    <p class='attribute'><strong>开始时间:</strong> 2021-03-17 15:19:54</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:00.006982</p>
+<p class='attribute'><strong>状态:</strong> 错误 1</p>
 
     </div>
     <!--<div style="float: left;width:50%;"><p class='description'>测试结果</p></div>-->
@@ -211,10 +211,10 @@
          <!-- <button class="btn btn-default" onclick='javascript:showCase(0)'>总结</button> -->
         <!--<button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>-->
         <!--<button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>-->
-        <a class="btn btn-primary" onclick='javascript:showCase(0)'>概要 100.00% </a>
-        <a class="btn btn-warning" onclick='javascript:showCase(4)'>错误 0 </a>
+        <a class="btn btn-primary" onclick='javascript:showCase(0)'>概要 0.00% </a>
+        <a class="btn btn-warning" onclick='javascript:showCase(4)'>错误 1 </a>
         <a class="btn btn-danger" onclick='javascript:showCase(1)'>失败  0 </a>
-        <a class="btn btn-success" onclick='javascript:showCase(2)'>成功 1 </a>
+        <a class="btn btn-success" onclick='javascript:showCase(2)'>成功 0 </a>
         <a class="btn btn-info" onclick='javascript:showCase(3)'>所有 1 </a>  
 
     </div>
@@ -238,28 +238,48 @@
             <th>错误截图</th>
         </tr>
         
-    <tr class='passClass'>
+    <tr class='errorClass'>
         <td>test_baidu.BaiduTest</td>
         <td>1</td>
+        <td>0</td>
+        <td>0</td>
         <td>1</td>
-        <td>0</td>
-        <td>0</td>
         <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
         <td>&nbsp;</td>
     </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_baiduSo: 百度搜索</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_baiduSo: 百度搜索</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        成功</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        错误</a>
 
-    <div id='div_pt1.1' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <pre>
-        pt1.1: C:\Users\Administrator\Desktop\UI\web_ui\comm\read_yaml.py:12: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
-  dict1=yaml.load(readfile)
+        ft1.1: Traceback (most recent call last):
+  File "D:\InstallSoft\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "D:\InstallSoft\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "D:\InstallSoft\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pyData_test\Github\UI\web_ui\case\test_baidu.py", line 12, in setUp
+    self.ps=PySele("Firefox")
+  File "D:\pyData_test\Github\UI\web_ui\comm\sele_brower.py", line 17, in __init__
+    driver=webdriver.Firefox()
+  File "D:\InstallSoft\Python37\lib\site-packages\selenium\webdriver\firefox\webdriver.py", line 164, in __init__
+    self.service.start()
+  File "D:\InstallSoft\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+
 
         </pre>
     </div>
@@ -271,9 +291,9 @@
         <tr id='total_row'>
             <td>总计</td>
             <td>1</td>
+            <td>0</td>
+            <td>0</td>
             <td>1</td>
-            <td>0</td>
-            <td>0</td>
             <td>&nbsp;</td>
             <th>&nbsp;</th>
         </tr>
@@ -340,7 +360,7 @@
                 {
                     name:'成功',
                     type:'bar',
-                    data:[1]
+                    data:[0]
                 //data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
                 },
                 {
@@ -352,13 +372,13 @@
                     name:'错误',
                     type:'line',
                     yAxisIndex: 1,
-                    data:[0]
+                    data:[1]
                     //data:[2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
                 }
             ]
         };
         myChartline.setOption(optionline);
-        console.log(0,1,0)
+        console.log(0,0,1)
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.getElementById('chart'));
 
@@ -385,9 +405,9 @@
                         radius : '60%',
                         center: ['50%', '60%'],
                         data:[
-                            {value:1, name:'成功'},
+                            {value:0, name:'成功'},
                             {value:0, name:'失败'},
-                            {value:0, name:'错误'}
+                            {value:1, name:'错误'}
                         ],
                         itemStyle: {
                             emphasis: {

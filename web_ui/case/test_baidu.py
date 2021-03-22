@@ -9,7 +9,7 @@ from comm.read_yaml import *
 
 class BaiduTest(unittest.TestCase):
     def setUp(self):
-        self.ps=PySele("Firefox")
+        self.ps=PySele("Chrome")
 
     def test_baiduSo(self):
         '''百度搜索'''
@@ -18,8 +18,8 @@ class BaiduTest(unittest.TestCase):
         self.ps.clear("id",getRead("baidu","so"))
         self.ps.send_key("id",getRead("baidu","so"),getRead("baidu","send"))
         self.ps.click("id",getRead("baidu","so_btm"))
-        time.sleep(5)
-        self.ps.get_screen(dir_screen("百度搜索截图"))
+        #time.sleep(5)
+        #self.ps.get_screen(dir_screen("百度搜索截图"))
 
     def tearDown(self):
         self.ps.quit()

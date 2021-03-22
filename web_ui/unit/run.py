@@ -31,4 +31,4 @@ def run_case():
 
 if __name__ == '__main__':
     run_case()
-    myEmail.mail()
+    #myEmail.mail()

@@ -217,11 +217,11 @@ function close_shots(obj) {
 
 <div class='heading'>
 <h1>测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-03-17 15:15:10</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.002991</p>
-<p class='attribute'><strong>Status:</strong> Pass 1 Error 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-03-22 17:13:32</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:08.370853</p>
+<p class='attribute'><strong>Status:</strong> Pass 5</p>
 
-<p class='description'>单元测试报告</p>
+<p class='description'>web自动化测试报告</p>
 </div>
 
 
@@ -266,93 +266,42 @@ function close_shots(obj) {
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr class='errorClass'>
-    <td>unittest.suite._ErrorHolder</td>
-    <td>2</td>
+<tr class='passClass'>
+    <td>test_login.TestLogin</td>
+    <td>4</td>
+    <td>4</td>
     <td>0</td>
     <td>0</td>
-    <td>2</td>
-    <td><a href="javascript:showClassDetail('c2',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c2',4)">Detail</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='Testcase'>TestInvest)</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
-        error</a>
-
-    <div id='div_ft2.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.1: TypeError: tearDownClass() missing 1 required positional argument: 'self'
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-        
-    </td>
-    <td></td>
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='Testcase'>test_login_noPassword_1</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='ft2.2' class='none'>
-    <td class='errorCase'><div class='Testcase'>TestLogin)</div></td>
-    <td colspan='5' align='center'>
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='Testcase'>test_login_noPassword_2</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
 
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
-        error</a>
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='Testcase'>test_login_noPassword_3</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
 
-    <div id='div_ft2.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft2.2: Traceback (most recent call last):
-  File "D:\InstallSoft\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "D:\InstallSoft\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "D:\InstallSoft\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\pyData_test\PO\TestCases\test_login.py", line 20, in setUpClass
-    cls.driver=webdriver.Chrome()
-  File "D:\InstallSoft\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "D:\InstallSoft\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-        
-    </td>
-    <td></td>
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='Testcase'>test_login_success</div></td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>3</td>
-    <td>1</td>
+    <td>5</td>
+    <td>5</td>
     <td>0</td>
-    <td>2</td>
+    <td>0</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
 </tr>

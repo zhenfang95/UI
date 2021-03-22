@@ -1,12 +1,10 @@
 # /!/usr/bin/python3
 # *-*coding-utf8*-*
-# Name:login_datas
-# Author:Administrator
-# Time:2019/12/5
-success={"user":"23434234","passwd":"python"}
+
+success={"user":"123456789","passwd":"1201201"}
 
 # 异常场景
-wrong_datas=[{"user":"234345","5467":"hdh"},
-    {"user":"234345","5467":"hdh"},
-    {"user":"234345","5467":"hdh"}
+wrong_datas=[{"user":"234345","passwd":"hdh"},
+    {"user":"111111134","passwd":"hdh"},
+    {"user":"00000001","passwd":"hdh"}
              ]

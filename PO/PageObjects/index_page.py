@@ -1,8 +1,6 @@
 # /!/usr/bin/python3
 # *-*coding-utf8*-*
-# Name:index_page
-# Author:Administrator
-# Time:2019/12/5
+
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
